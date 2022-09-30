@@ -9,12 +9,12 @@
 
     @unless(count($listings) == 0)
 
-    @foreach($listings as $listing)
-    <x-listing-card :listing="$listing" />
-    @endforeach
+        @foreach($listings as $listing)
+        <x-listing-card :listing="$listing" />
+        @endforeach
 
-    @else
-    <h3>No listings found</h3>
+        @else
+        <h3>No listings found</h3>
     @endunless
 
   </div>

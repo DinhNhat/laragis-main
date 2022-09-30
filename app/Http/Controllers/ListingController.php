@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
 class ListingController extends Controller
@@ -61,7 +62,7 @@ class ListingController extends Controller
         if($listing->user_id != auth()->id()) {
             abort(403, 'Unauthorized Action');
         }
-        
+
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required'],
@@ -87,7 +88,7 @@ class ListingController extends Controller
         if($listing->user_id != auth()->id()) {
             abort(403, 'Unauthorized Action');
         }
-        
+
         $listing->delete();
         return redirect('/')->with('message', 'Listing deleted successfully');
     }
@@ -96,4 +97,5 @@ class ListingController extends Controller
     public function manage() {
         return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
     }
+
 }

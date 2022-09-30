@@ -8,7 +8,7 @@
     <form method="POST" action="{{ url('/users/authenticate') }}">
       @csrf
 
-      <div class="mb-6">
+      <div class="mb-4">
         <label for="email" class="inline-block text-lg mb-2">Email</label>
         <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" value="{{old('email')}}" />
 
@@ -17,9 +17,9 @@
         @enderror
       </div>
 
-      <div class="mb-6">
+      <div class="mb-4">
         <label for="password" class="inline-block text-lg mb-2">
-          Password
+            Password
         </label>
         <input type="password" class="border border-gray-200 rounded p-2 w-full" name="password"
           value="{{old('password')}}" />
@@ -28,6 +28,12 @@
         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
         @enderror
       </div>
+
+        <div class="mb-4">
+            <span class="form-label-description">
+                <a href="{{ url('/auth/forgot-password') }}" class="text-laravel">I forgot password</a>
+            </span>
+        </div>
 
       <div class="mb-6">
         <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">

@@ -50,6 +50,11 @@ class UserController extends Controller
         return view('users.login');
     }
 
+    // Show forgot password page
+    public function forgotPass() {
+        return view('auth.forgot-password');
+    }
+
     // Authenticate User
     public function authenticate(Request $request) {
         $formFields = $request->validate([
