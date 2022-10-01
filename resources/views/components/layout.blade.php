@@ -10,7 +10,6 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -69,6 +68,14 @@
   </footer>
 
   <x-flash-message />
+
+  <script>
+      setTimeout(hideFlashMessage, 3000);
+
+      function hideFlashMessage() {
+          document.getElementById('msg-flash').style.display = "none";
+      }
+  </script>
 </body>
 
 </html>
