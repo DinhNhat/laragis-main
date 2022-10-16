@@ -27,7 +27,7 @@ use App\Models\Listing;
 // destroy - Delete listing
 
 // All Listings
-Route::get('/', [ListingController::class, 'index']);
+Route::get('/', [ListingController::class, 'index'])->name('main');
 
 // Show Create Form
 Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
@@ -61,6 +61,9 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // Show Login Form
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+// Show Login Form
+Route::get('/new-login', [UserController::class, 'newLogin'])->name('new-login');
 
 // Show Login Form
 Route::get('/auth/forgot-password', [UserController::class, 'forgotPass'])->name('forgot-pass')->middleware('guest');

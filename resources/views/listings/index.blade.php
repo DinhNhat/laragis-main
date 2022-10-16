@@ -1,25 +1,18 @@
-<x-layout>
-  @if (!Auth::check())
-    @include('partials._hero')
-  @endif
+<x-layout1>
+    <div class="row">
+        <div class="col-12">
+            <h4 class="card-title">Popular Jobs</h4>
+        </div>
 
-  @include('partials._search')
-
-  <div class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4">
-
-    @unless(count($listings) == 0)
-
-        @foreach($listings as $listing)
-        <x-listing-card :listing="$listing" />
-        @endforeach
-
+        <!-- Single Job Area -->
+        @unless(count($listings) == 0)
+            @foreach($listings as $listing)
+                <x-jobs.single-job :listing="$listing" />
+            @endforeach
         @else
-        <h3>No listings found</h3>
-    @endunless
+            <h3>No listings found</h3>
+        @endunless
 
-  </div>
+    </div>
 
-  <div class="mt-6 p-4">
-    {{$listings->links()}}
-  </div>
-</x-layout>
+</x-layout1>

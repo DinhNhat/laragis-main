@@ -6,12 +6,13 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
     // Show Register/Create Form
     public function create() {
-        return view('users.register');
+        return view('auth.register');
     }
 
     // Create New User
@@ -19,7 +20,7 @@ class UserController extends Controller
         $formFields = $request->validate([
             'name' => ['required', 'min:3'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => 'required|confirmed|min:6'
+            'password' =>  ['required', 'confirmed', Password::min(5)->numbers()],
         ]);
 
         // Hash Password
@@ -47,7 +48,11 @@ class UserController extends Controller
 
     // Show Login Form
     public function login() {
-        return view('users.login');
+        return view('auth.login');
+    }
+
+    public function newLogin() {
+        return view('auth.login');
     }
 
     // Show forgot password page

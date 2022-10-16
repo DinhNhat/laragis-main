@@ -1,7 +1,12 @@
 @if(session()->has('message'))
-<div id="msg-flash" class="fixed top-0 left-1/2 transform -translate-x-1/2 bg-laravel text-white px-48 py-3">
-    <p>
-        {{session('message')}}
-    </p>
+<div id="msg-flash" class="col-12">
+    <div class="card mb-30">
+        <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+                <h5 class="alert-heading">Well done!</h5>
+                <p>{{session('message')}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 @endif
