@@ -11,13 +11,12 @@
                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                     <line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Author</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#job" aria-expanded="false"
-               aria-controls="job">
+            <a class="nav-link" href="{{ url('/listings') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                      stroke-linejoin="round" class="feather feather-bell link-icon">

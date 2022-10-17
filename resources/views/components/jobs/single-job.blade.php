@@ -22,7 +22,7 @@
 
                     </div>
                 </div>
-                <p class="mt-20 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p class="mt-20 font-13">{{ \Illuminate\Support\Str::words($listing->description, 7, '...') }}</p>
                 <ul class="list-unstyled">
                     <li class="media mb-10">
                         <span class="d-block g-width-110">
@@ -45,7 +45,7 @@
                 </ul>
 
                 <div class="job-button-area d-flex justify-content-between mt-30">
-                    <a class="text-success" href="#">See Details</a>
+                    <a class="text-success" href="{{ route('show-listing', ['listing' => $listing->id]) }}">See Details</a>
                 </div>
             </div>
         </div>

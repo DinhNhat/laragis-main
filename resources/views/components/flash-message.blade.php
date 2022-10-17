@@ -4,7 +4,7 @@
         <div class="card-body">
             <div class="alert alert-warning" role="alert">
                 <h5 class="alert-heading">Well done!</h5>
-                <p>{{session('message')}}</p>
+                <p>{{ session('message') }}</p>
             </div>
         </div>
     </div>
