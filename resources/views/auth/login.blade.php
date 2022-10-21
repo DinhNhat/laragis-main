@@ -9,7 +9,7 @@
                 @csrf
 
                 <div class="form-group">
-                    <input class="form-control login" type="email" id="emailaddress" required="" placeholder="Enter your email" name="email" value="{{ old('email') }}">
+                    <input class="font-18 form-control login" type="email" id="emailaddress" required="" placeholder="Enter your email" name="email" value="{{ old('email') }}">
                     @error('email')
                         <p class="text-danger text-xs mt-1">{{$message}}</p>
                     @enderror
@@ -17,7 +17,7 @@
 
                 <div class="form-group">
                     <a href="forget-password.html" class="text-dark float-right"></a>
-                    <input class="form-control login" type="password" required="" id="password" placeholder="Enter your password" name="password" value="{{ old('password') }}">
+                    <input class="font-18 form-control login" type="password" required="" id="password" placeholder="Enter your password" name="password" value="{{ old('password') }}">
                     @error('password')
                         <p class="text-danger text-xs mt-1">{{$message}}</p>
                     @enderror
@@ -26,16 +26,16 @@
                 <div class="form-group d-flex justify-content-between align-items-center mb-3">
                     <div class="checkbox d-inline mb-0">
                         <input type="checkbox" name="checkbox-1" id="checkbox-8">
-                        <label for="checkbox-8" class="cr mb-0 font-13">Remember me</label>
+                        <label for="checkbox-8" class="font-15 cr mb-0 font-13">Remember me</label>
                     </div>
-                    <span><a class="font-12 text-success" href="forget-password.html">Forgot your password?</a></span>
+                    <span><a class="font-15 text-success" href="forget-password.html">Forgot your password?</a></span>
                 </div>
 
                 <div class="form-group mb-0">
-                    <button class="btn btn-primary btn-block" type="submit"> Log In </button>
+                    <button class="font-15 btn btn-primary btn-block" type="submit"> Log In </button>
                 </div>
 
-                <div class="text-center mt-15"><span class="mr-2 font-12">Don't have an account?</span><a class="font-12" href="{{ url('/register') }}">Sign up</a></div>
+                <div class="font-15 text-center mt-15"><span class="mr-2">Don't have an account?</span><a href="{{ url('/register') }}">Sign up</a></div>
 
             </form>
 
