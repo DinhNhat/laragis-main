@@ -35,7 +35,7 @@ Route::get('/listings', [ListingController::class, 'index']);
 
 Route::middleware(['revalidate', 'auth'])->group(function() {
     // Store Listing Data
-    Route::post('/listings', [ListingController::class, 'store']);
+    Route::post('/listings', [ListingController::class, 'store'])->name('create-job');
 
 // Show Edit Form
     Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('show-listing-edit');

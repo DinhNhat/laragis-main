@@ -1,7 +1,12 @@
 <x-layout1>
     <div class="row">
         <div class="col-12">
-            <h4 class="card-title">Popular Jobs</h4>
+            <div class="d-flex justify-content-between align-items-center mb-20">
+                <h4 class="card-title">Popular Jobs</h4>
+                @auth
+                    <a href="{{ url('/listings/create') }}" class="btn btn-primary waves-effect waves-light float-right mb-3">+ Create A New Job</a>
+                @endauth
+            </div>
         </div>
 
         <!-- Single Job Area -->

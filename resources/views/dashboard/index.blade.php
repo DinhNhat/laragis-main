@@ -44,7 +44,7 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs profile-tab" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active show" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">Basic</a>
+                                <a class="nav-link active show" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">Info</a>
                             </li>
 
                         </ul>
@@ -117,7 +117,7 @@
                                 <div class="row mb-3">
                                     <div class="col-9">
                                         <div class="progress-wrapper">
-                                            <span class="progress-label text-dark">Web UI</span>
+                                            <span class="progress-label text-dark">Front End</span>
                                             <div class="progress mt-2 mb-2" style="height: 5px;">
                                                 <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                                             </div>
@@ -165,6 +165,20 @@
                                     <div class="col-3 align-self-end text-right">
                                         <span class="text-dark mb-0">55%</span>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card box-margin">
+                            <div class="card-body">
+                                <div class="profile-skills-area">
+                                    <h6 class="card-title mb-15">Soft Skills</h6>
+
+                                    <a class="badge badge-success badge-pill mr-1 my-1" href="#">Problem-solving</a>
+                                    <a class="badge badge-success badge-pill mr-1 my-1" href="#">Interpersonal Skills</a>
+                                    <a class="badge badge-success badge-pill mr-1 my-1" href="#">Team Work</a>
                                 </div>
                             </div>
                         </div>

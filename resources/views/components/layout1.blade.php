@@ -30,7 +30,7 @@
                      style="vertical-align:middle;margin:50px 0px"
                 />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="{{ url('/') }}"><img src="img/core-img/small-logo.png"
+            <a class="navbar-brand brand-logo-mini" href="{{ url('/') }}"><img src="{{ asset('img/core-img/small-logo.png') }}"
                                                                            alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
@@ -56,7 +56,7 @@
                 <ul class="top-navbar-area navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown dropdown-animate">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="img/member-img/contact-2.jpg" alt="profile" />
+                            <img src="{{ asset('img/member-img/contact-2.jpg') }}" alt="profile" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown profile-top"
                              aria-labelledby="profileDropdown">
