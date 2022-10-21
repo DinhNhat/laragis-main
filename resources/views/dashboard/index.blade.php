@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-md-4">
             <div class="card mb-30">
-                <img src="{{ asset('img/blog-img/XOAI8474.jpg') }}" class="profile-cover-img" alt="thumb">
+                <img src="{{ asset('img/blog-img/XOAI8474.JPG') }}" class="profile-cover-img" alt="thumb">
                 <div class="card-body text-center">
                     <h6 class="font-20 mb-1">Nhat Dinh</h6>
                     <p class="font-13 text-dark">Web Full Stack Developer</p>
