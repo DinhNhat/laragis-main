@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\V1\CustomerController;
+use App\Http\Controllers\Api\V1\InvoiceController;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,16 @@ Route::post('login', [\App\Http\Controllers\Api\AuthController::class, 'login'])
 Route::post('register', [\App\Http\Controllers\Api\AuthController::class, 'register']);
 
 
- Route::get('listings/self', [\App\Http\Controllers\Api\ListingPostController::class, 'self']);
+Route::get('listings/self', [\App\Http\Controllers\Api\ListingPostController::class, 'self']);
+
+// Api Customers and Invoices - api/v1
+Route::middleware(['auth:sanctum'])->prefix('v1')->group(function() {
+    Route::apiResource('customers', CustomerController::class);
+    Route::apiResource('invoices', InvoiceController::class);
+
+    Route::post('invoices/bulk', [InvoiceController::class, 'bulkStore']);
+});
+
+
 
 

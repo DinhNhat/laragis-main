@@ -2,28 +2,15 @@
     <div class="row">
         <div class="col-12 col-md-4">
             <div class="card mb-30">
-                <img src="img/blog-img/4.jpg" class="profile-cover-img" alt="thumb">
+                <img src="{{ asset('img/blog-img/XOAI8474.jpg') }}" class="profile-cover-img" alt="thumb">
                 <div class="card-body text-center">
-                    <h6 class="font-20 mb-1">Jhon Alin Deo</h6>
-                    <p class="font-13 text-dark">Web Developer</p>
-                    <p class="description px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime mollitia.</p>
-                    <div class="hire">
-                        <button class="btn btn-danger btn-sm mr-2 mb-2">Hire me</button>
-                        <button class="btn btn-success btn-sm mb-2">Follow me</button>
-                    </div>
+                    <h6 class="font-20 mb-1">Nhat Dinh</h6>
+                    <p class="font-13 text-dark">Web Full Stack Developer</p>
+                    <p class="description px-4"></p>
                     <!-- Icon -->
                     <div class="profile-social-icon mt-15 justify-content-center d-flex">
                         <a href="#" data-toggle="tooltip" title="Facebook">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Dribbble">
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Instagram">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -35,15 +22,15 @@
                     <h4 class="font-16 mb-15">Contact :</h4>
                     <div class="mt-0 d-flex align-items-center">
                         <i class="fa fa-home pr-2"></i>
-                        <h6 class="font-14 mb-0">example@.com</h6>
+                        <h6 class="font-14 mb-0">nguyendinhnhat206@gmail.com</h6>
                     </div>
                     <div class="mt-3 d-flex align-items-center">
                         <i class="fa fa-phone pr-2"></i>
-                        <h6 class="font-14 mb-0">+91 656 887 245</h6>
+                        <h6 class="font-14 mb-0">(+1) 437 993 4303</h6>
                     </div>
                     <div class="mt-3 d-flex align-items-center">
                         <i class="fa fa-map pr-2 align-self-start"></i>
-                        <h6 class="font-14 mb-0">Van Barneveldlaan 98, Netherlands</h6>
+                        <h6 class="font-14 mb-0">3 Langdale Ct, North York, Ontario</h6>
                     </div>
                 </div>
             </div>
@@ -59,9 +46,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active show" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">Basic</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="invoice-tab" data-toggle="tab" href="#invoice" role="tab" aria-controls="invoice" aria-selected="false">Invoice</a>
-                            </li>
+
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <!--first tab-->
@@ -72,7 +57,7 @@
                                             <span class="profile-cat">Full Name</span>
                                         </div>
                                         <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">Jhon Alin Deo</span>
+                                            <span class="profile-info">Nhat Dinh Nguyen</span>
                                         </div>
                                     </div>
                                     <div class="row profile-row">
@@ -80,7 +65,7 @@
                                             <span class="profile-cat">Email</span>
                                         </div>
                                         <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">example@example.com</span>
+                                            <span class="profile-info">nguyendinhnhat206@gmail.com</span>
                                         </div>
                                     </div>
                                     <div class="row profile-row">
@@ -88,7 +73,7 @@
                                             <span class="profile-cat">Country</span>
                                         </div>
                                         <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">Netherland</span>
+                                            <span class="profile-info">Canada</span>
                                         </div>
                                     </div>
                                     <div class="row profile-row">
@@ -96,7 +81,7 @@
                                             <span class="profile-cat">Address</span>
                                         </div>
                                         <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">Van Barneveldlaan 98 7031 ZK Wehl</span>
+                                            <span class="profile-info">3 Langdale Ct</span>
                                         </div>
                                     </div>
 
@@ -105,15 +90,7 @@
                                             <span class="profile-cat">Contact</span>
                                         </div>
                                         <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">+88 586 887 245</span>
-                                        </div>
-                                    </div>
-                                    <div class="row profile-row">
-                                        <div class="col-xs-5 col-sm-3">
-                                            <span class="profile-cat">Date Of Birth</span>
-                                        </div>
-                                        <div class="col-xl-7 col-sm-9">
-                                            <span class="profile-info">1995-05-15</span>
+                                            <span class="profile-info">(+1) 437 993 4303</span>
                                         </div>
                                     </div>
                                     <div class="row profile-row">
@@ -127,106 +104,6 @@
 
                                 </div>
                             </div>
-                            <!--second tab-->
-                            <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="invoice-tab">
-                                <div class="card-body pb-0">
-                                    <div class="table-content table-responsive">
-                                        <div class="table-body">
-                                            <table class="table">
-                                                <thead>
-                                                <tr>
-                                                    <th>Order No</th>
-                                                    <th>Image</th>
-                                                    <th>Product</th>
-                                                    <th>Quantity</th>
-                                                    <th>Total</th>
-                                                    <th class="text-center">Action</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>UAFQA58D</td>
-                                                    <td><img class="chat-img" src="img/member-img/1.png" alt="Product image "></td>
-                                                    <td>Jane Austin</td>
-                                                    <td>10</td>
-                                                    <td>24</td>
-                                                    <td class="action-buttons text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>N89528GU</td>
-                                                    <td><img class="chat-img" src="img/member-img/2.png" alt="Product image "></td>
-                                                    <td>Frogo Meltor</td>
-                                                    <td>6</td>
-                                                    <td>26</td>
-                                                    <td class="action-buttons text-center text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>D35AA9FQ</td>
-                                                    <td><img class="chat-img" src="img/member-img/8.png" alt="Product image "></td>
-                                                    <td>Lashunda Magyar</td>
-                                                    <td>3</td>
-                                                    <td>93</td>
-                                                    <td class="action-buttons text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>55FS5SSG</td>
-                                                    <td><img class="chat-img" src="img/member-img/9.png" alt="Product image "></td>
-                                                    <td>Boris Sandoval</td>
-                                                    <td>9</td>
-                                                    <td>96</td>
-                                                    <td class="action-buttons text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>D5DDNA2D</td>
-                                                    <td><img class="chat-img" src="img/member-img/10.png" alt="Product image "></td>
-                                                    <td>Tuan Cothren</td>
-                                                    <td>4</td>
-                                                    <td>73</td>
-                                                    <td class="action-buttons text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>925935NA</td>
-                                                    <td><img class="chat-img" src="img/member-img/11.png" alt="Product image "></td>
-                                                    <td>Aldo Iacovelli</td>
-                                                    <td>5</td>
-                                                    <td>69</td>
-                                                    <td class="action-buttons text-center">
-                                                        <a href="invoice.html">
-                                                            <i class="fa fa-eye text-dark font-16"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,11 +113,11 @@
                         <!-- Project status -->
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Project status</h6>
+                                <h6 class="card-title">Skill Set</h6>
                                 <div class="row mb-3">
                                     <div class="col-9">
                                         <div class="progress-wrapper">
-                                            <span class="progress-label text-dark">Web design</span>
+                                            <span class="progress-label text-dark">Web UI</span>
                                             <div class="progress mt-2 mb-2" style="height: 5px;">
                                                 <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                                             </div>
@@ -253,20 +130,20 @@
                                 <div class="row mb-3">
                                     <div class="col-9">
                                         <div class="progress-wrapper">
-                                            <span class="progress-label text-dark">Website Markup</span>
+                                            <span class="progress-label text-dark">Back End</span>
                                             <div class="progress mt-2 mb-2" style="height: 5px;">
-                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3 align-self-end text-right">
-                                        <span class="text-dark mb-0">72%</span>
+                                        <span class="text-dark mb-0">85%</span>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-9">
                                         <div class="progress-wrapper">
-                                            <span class="progress-label text-dark">One page</span>
+                                            <span class="progress-label text-dark">Database</span>
                                             <div class="progress mt-2 mb-2" style="height: 5px;">
                                                 <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
                                             </div>
@@ -279,7 +156,7 @@
                                 <div class="row mb-3">
                                     <div class="col-9">
                                         <div class="progress-wrapper">
-                                            <span class="progress-label text-dark">Mobile Template</span>
+                                            <span class="progress-label text-dark">DevOps</span>
                                             <div class="progress mt-2 mb-2" style="height: 5px;">
                                                 <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"></div>
                                             </div>
@@ -293,72 +170,6 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-6 height-card box-margin">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="bg-transparent d-flex align-items-center justify-content-between">
-                                    <div class="widgets-card-title">
-                                        <h5 class="card-title">Recent files</h5>
-                                    </div>
-                                </div>
-                                <!-- Single Download File -->
-                                <div class="widget-download-file d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center mr-3">
-                                        <div class="download-file-icon mr-3">
-                                            <img src="img/filemanager-img/1.png" alt="">
-                                        </div>
-                                        <div class="user-text-table">
-                                            <h6 class="d-inline-block font-14 mb-0">File</h6>
-                                            <p class="mb-0">Lorem ipsum</p>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="download-link badge badge-primary badge-pill">Download</a>
-                                </div>
-
-                                <!-- Single Download File -->
-                                <div class="widget-download-file d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center mr-3">
-                                        <div class="download-file-icon mr-3">
-                                            <img src="img/filemanager-img/5.png" alt="">
-                                        </div>
-                                        <div class="user-text-table">
-                                            <h6 class="d-inline-block font-14 mb-0">Bandwidth</h6>
-                                            <p class="mb-0">Lorem ipsum</p>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="download-link badge badge-info badge-pill">Download</a>
-                                </div>
-
-                                <!-- Single Download File -->
-                                <div class="widget-download-file d-flex align-items-center justify-content-between mb-4">
-                                    <div class="d-flex align-items-center mr-3">
-                                        <div class="download-file-icon mr-3">
-                                            <img src="img/filemanager-img/6.png" alt="">
-                                        </div>
-                                        <div class="user-text-table">
-                                            <h6 class="d-inline-block font-14 mb-0">Projects</h6>
-                                            <p class="mb-0">Lorem ipsum</p>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="download-link badge badge-success badge-pill">Download</a>
-                                </div>
-
-                                <!-- Single Download File -->
-                                <div class="widget-download-file d-flex align-items-center justify-content-between">
-                                    <div class="d-flex align-items-center mr-3">
-                                        <div class="download-file-icon mr-3">
-                                            <img src="img/filemanager-img/7.png" alt="">
-                                        </div>
-                                        <div class="user-text-table">
-                                            <h6 class="d-inline-block font-14 mb-0">Download</h6>
-                                            <p class="mb-0">Lorem ipsum</p>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="download-link badge badge-primary badge-pill">Download</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

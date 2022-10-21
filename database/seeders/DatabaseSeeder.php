@@ -28,8 +28,12 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user->id
         ]);
 
+        $this->call([
+            CustomerSeeder::class
+        ]);
+
         // Listing::create([
-        //     'title' => 'Laravel Senior Developer', 
+        //     'title' => 'Laravel Senior Developer',
         //     'tags' => 'laravel, javascript',
         //     'company' => 'Acme Corp',
         //     'location' => 'Boston, MA',
