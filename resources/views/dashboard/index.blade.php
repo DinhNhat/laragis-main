@@ -4,13 +4,18 @@
             <div class="card mb-30">
                 <img src="{{ asset('img/blog-img/XOAI8474.JPG') }}" class="profile-cover-img" alt="thumb">
                 <div class="card-body text-center">
-                    <h6 class="font-20 mb-1">Nhat Dinh</h6>
-                    <p class="font-13 text-dark">Web Full Stack Developer</p>
-                    <p class="description px-4"></p>
+                    <h4 class="font-20 mb-1">Nhat Dinh</h4>
+{{--                    <p class="font-13 text-dark lead">--}}
+{{--                        --}}
+{{--                    </p>--}}
+                    <p class="font-17 description px-4">
+                        A motivated, creative, and resourceful developer who takes pride in the work
+                        and wants to partner with those who are pushing the boundaries of the technology.
+                    </p>
                     <!-- Icon -->
                     <div class="profile-social-icon mt-15 justify-content-center d-flex">
-                        <a href="#" data-toggle="tooltip" title="Facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="https://github.com/DinhNhat" target="_blank" data-toggle="tooltip" title="Github">
+                            <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
