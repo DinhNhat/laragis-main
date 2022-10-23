@@ -30,10 +30,23 @@ $(function() {
     });
 
     function updateGallery(media) {
+        // Check if the list media is empty
+
+        if ($("#no-media-list").length > 0) {
+            $("#no-media-list").remove();
+
+            // Append content next to the media list header
+            $("h5.media-list-header").after(
+                '<div class="row text-center" id="gallery-uploads"></div>');
+
+        }
+
         $("#gallery-uploads").append('<div class="col-sm-6 col-xl-3">\n' +
             '                            <a href="'+ media.url +'" target="_blank" data-lightbox="example-set">\n' +
             '                                <img src="'+ media.url +'" class="img-fluid mb-30" alt="">\n' +
             '                            </a>\n' +
             '                        </div>');
+
+
     }
 });

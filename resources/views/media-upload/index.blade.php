@@ -15,7 +15,7 @@
                         </div>
                         <!-- End Textarea Input with Left Appended Icon -->
                         <hr class="g-brd-gray-light-v4 g-mx-minus-30">
-                        <button type="submit" class="btn btn-primary submit">Upload Media</button>
+{{--                        <button type="submit" class="btn btn-primary submit">Upload Media</button>--}}
                     </form>
                 </div>
             </div>
@@ -24,9 +24,9 @@
         <div class="col-12 box-margin">
             <div class="card">
                 <div class="card-body pb-0">
-                    <h5 class="gallery_title card-title">Media Upload Gallery</h5>
-                    <div class="row text-center" id="gallery-uploads">
-                        @if (count($mediaList) > 0)
+                    <h5 class="gallery_title card-title media-list-header">Media Upload Gallery</h5>
+                    @if (count($mediaList) > 0)
+                        <div class="row text-center" id="gallery-uploads">
                             @foreach ($mediaList as $media)
                                 <div class="col-sm-6 col-xl-3">
                                     <a href="{{ url('/') . $media->path }}" target="_blank" data-lightbox="example-set">
@@ -34,11 +34,10 @@
                                     </a>
                                 </div>
                             @endforeach
-                        @else
-                            <h5>No Media List Found</h5>
-                        @endif
-
-                    </div>
+                        </div>
+                    @else
+                        <h1 class="display-4 text-danger" id="no-media-list">No Media List</h1>
+                    @endif
                 </div>
             </div>
         </div>
