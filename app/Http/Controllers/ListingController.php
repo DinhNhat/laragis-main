@@ -34,11 +34,13 @@ class ListingController extends Controller
             'title' => 'required',
             'company' => ['required', Rule::unique('listings', 'company')],
             'location' => 'required',
-            'website' => 'required',
+            'website' => 'sometimes',
             'email' => ['required', 'email'],
             'tags' => 'required',
             'description' => 'required'
         ]);
+
+        dd($request->hasFile('logo'));
 
         if($request->hasFile('logo')) {
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
@@ -48,7 +50,7 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-        return redirect('/')->with('message', 'Listing created successfully!');
+        return redirect('/listings')->with('message', 'Listing created successfully!');
     }
 
     // Show Edit Form

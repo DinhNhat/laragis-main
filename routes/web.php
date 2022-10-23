@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,6 +56,10 @@ Route::middleware(['revalidate', 'auth'])->group(function() {
     // Log User Out
     Route::post('/logout', [UserController::class, 'logout']);
 
+    // Media files upload
+    Route::get('/media-upload', [UploadController::class, 'index']);
+    Route::post('/media-upload', [UploadController::class, 'upload']);
+
 });
 
 
@@ -79,35 +84,35 @@ Route::get('/auth/forgot-password', [UserController::class, 'forgotPass'])->name
 // Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
-Route::get('/setup', function() {
-    $credentials = [
-        'email' => 'nhat123@yahoo.net',
-        'password' => 'nhat123'
-    ];
-
-    if (!Auth::attempt($credentials))
-    {
-        $user = new \App\Models\User();
-
-        $user->name = 'Admin';
-        $user->email = $credentials['email'];
-        $user->password = \Illuminate\Support\Facades\Hash::make($credentials['password']);
-
-        $user->save();
-
-        if (Auth::attempt($credentials))
-        {
-            $user = Auth::user();
-
-            $adminToken = $user->createToken('admin-token', ['create', 'update', 'delete']);
-            $updateToken = $user->createToken('update-token', ['create', 'update']);
-            $basicToken = $user->createToken('basic-token');
-
-            return [
-                'admin' => $adminToken->plainTextToken,
-                'update' => $updateToken->plainTextToken,
-                'basic' => $basicToken->plainTextToken,
-            ];
-        }
-    }
-});
+//Route::get('/setup', function() {
+//    $credentials = [
+//        'email' => 'nhat123@yahoo.net',
+//        'password' => 'nhat123'
+//    ];
+//
+//    if (!Auth::attempt($credentials))
+//    {
+//        $user = new \App\Models\User();
+//
+//        $user->name = 'Admin';
+//        $user->email = $credentials['email'];
+//        $user->password = \Illuminate\Support\Facades\Hash::make($credentials['password']);
+//
+//        $user->save();
+//
+//        if (Auth::attempt($credentials))
+//        {
+//            $user = Auth::user();
+//
+//            $adminToken = $user->createToken('admin-token', ['create', 'update', 'delete']);
+//            $updateToken = $user->createToken('update-token', ['create', 'update']);
+//            $basicToken = $user->createToken('basic-token');
+//
+//            return [
+//                'admin' => $adminToken->plainTextToken,
+//                'update' => $updateToken->plainTextToken,
+//                'basic' => $basicToken->plainTextToken,
+//            ];
+//        }
+//    }
+//});

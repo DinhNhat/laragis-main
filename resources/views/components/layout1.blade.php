@@ -14,7 +14,13 @@
     <title>LaraGigs | Find Jobs & Tech Projects</title>
 
     <!-- Master Stylesheet CSS -->
+
     <link rel="stylesheet" href="{{ asset('theme/style.css') }}">
+    <meta name="csrf_token" id="csrf-token" content="{{ csrf_token() }}" />
+    <script>
+        const SITE_URL = '{{ url('') }}';
+        const CSRF_TOKEN = "{{ csrf_token() }}";
+    </script>
 </head>
 
 <body>
@@ -132,7 +138,7 @@
     <script src="{{ asset('theme/js/default-assets/apex-custom.js') }}"></script>
     <script src="{{ asset('theme/js/default-assets/dashboard-active.js') }}"></script>
 
-
+    <script src="{{ asset('custom-js/custom.js') }}"></script>
 </body>
 
 </html>
