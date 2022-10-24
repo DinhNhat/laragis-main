@@ -1,8 +1,6 @@
 $(function() {
     $("#upload-media").change(function() {
 
-        console.log('Media upload is proocessing...');
-
         const form = new FormData();
 
         form.append('media', $(this)[0].files[0]);
@@ -19,10 +17,18 @@ $(function() {
             data: form,
             url: SITE_URL + '/media-upload',
             success(results) {
+                const mediaErrorMessage = $("#error-media-upload");
+
                 if (results.error === false) {
+                    // Remove error message if it presents
+                    if (mediaErrorMessage.length > 0) {
+                        mediaErrorMessage.addClass('d-none');
+                    }
+
                     updateGallery(results);
                 } else {
-                    alert('Upload media failed');
+                    mediaErrorMessage.removeClass('d-none');
+                    mediaErrorMessage.text(results.message);
                 }
             }
         });

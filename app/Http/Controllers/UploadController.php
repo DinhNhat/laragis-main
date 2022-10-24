@@ -6,6 +6,7 @@ use App\Models\Media;
 use App\Service\UploadService;
 use App\Service\UploadServiceContract;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UploadController extends Controller
 {
@@ -26,9 +27,16 @@ class UploadController extends Controller
     public function upload(Request $request)
     {
         // Validate file
-//        $validatedData = $request->validate([
-//            'media' => 'required|file|mimes:jpg,bmp,png|max:5*1024'
-//        ]);
+        $validator = Validator::make($request->all(), [
+            'media' => 'required|file|mimes:jpeg,jpg,jpe,bmp,png,webp,btif,gif|max:102400'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'error' => true,
+                'message' => 'The media failed to upload!!!'
+            ]);
+        }
 
         // Call upload media service
         $savedMedia = $this->service->storeUploadMedia($request);

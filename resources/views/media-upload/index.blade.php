@@ -9,9 +9,7 @@
                         <div class="form-group g-mb-20">
                             <h6 for="media">Media Upload</h6>
                             <input type="file" class="form-control-file" id="upload-media" name="media">
-                            @error('media')
-                                <p class="text-danger text-xs mt-1">{{$message}}</p>
-                            @enderror
+                            <p id="error-media-upload" class="d-none text-danger text-xs mt-1"></p>
                         </div>
                         <!-- End Textarea Input with Left Appended Icon -->
                         <hr class="g-brd-gray-light-v4 g-mx-minus-30">

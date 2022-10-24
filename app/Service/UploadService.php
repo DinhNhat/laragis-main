@@ -51,6 +51,11 @@ class UploadService implements UploadServiceContract
                     $sizeInMegaByte
                 );
 
+                // Check if there is already same media file in DB
+                $foundMedia = \App\Models\Media::where('file_name', $media->getClientOriginalName())->first();
+
+                if ($foundMedia) return false;
+
                 // Save Media to DB
                 return \App\Models\Media::create($mediaDTO->toArray());
             }
